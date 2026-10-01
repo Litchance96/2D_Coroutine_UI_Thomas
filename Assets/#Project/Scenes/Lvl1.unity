@@ -348,18 +348,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 462783368759889911, guid: 11a02f726f642d44f807819d75d1de9e, type: 3}
-      propertyPath: renderer
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 462783368759889911, guid: 11a02f726f642d44f807819d75d1de9e, type: 3}
-      propertyPath: spriteFaceUp
-      value: 
-      objectReference: {fileID: 5189691121816951081, guid: a1692cd7d3c3f4b498a77c9bad13d2e0, type: 3}
-    - target: {fileID: 462783368759889911, guid: 11a02f726f642d44f807819d75d1de9e, type: 3}
-      propertyPath: spriteFaceDown
-      value: 
-      objectReference: {fileID: 0}
     - target: {fileID: 6644674620101653715, guid: 11a02f726f642d44f807819d75d1de9e, type: 3}
       propertyPath: m_Name
       value: Card
@@ -403,18 +391,6 @@ PrefabInstance:
     - target: {fileID: 7403392845483170543, guid: 11a02f726f642d44f807819d75d1de9e, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8364562382000576358, guid: 11a02f726f642d44f807819d75d1de9e, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 849349674, guid: a1692cd7d3c3f4b498a77c9bad13d2e0, type: 3}
-    - target: {fileID: 8364562382000576358, guid: 11a02f726f642d44f807819d75d1de9e, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8364562382000576358, guid: 11a02f726f642d44f807819d75d1de9e, type: 3}
-      propertyPath: m_WasSpriteAssigned
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
