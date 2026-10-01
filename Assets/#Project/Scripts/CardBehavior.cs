@@ -1,4 +1,3 @@
-
 using UnityEngine;
 
 [RequireComponent(typeof(Animator))]
@@ -13,6 +12,9 @@ public class CardBehavior : MonoBehaviour
     [SerializeField] private SpriteRenderer renderer;
 
     public bool IsFaceUp { get; private set; } = false;
+
+    private LevelManager manager = null;
+    private int id;
 
 
 #pragma warning restore CS0108
@@ -43,14 +45,28 @@ public class CardBehavior : MonoBehaviour
 
     }
 
-    public void TurnFaceUp()
+    private void Turn(bool isFaceUp)
     {
-        animator.SetBool(FACE_UP_ANIMATION, true);
-        IsFaceUp = true;
+        animator.SetBool(FACE_UP_ANIMATION, isFaceUp);
+        IsFaceUp = isFaceUp;
     }
+
+    public void TurnFaceUp() => Turn(true);
+    public void TurnFaceDown() => Turn(false);
 
     private void FaceUp()
     {
         renderer.sprite = spriteFaceUp;
+    }
+
+    private void FaceDown()
+    {
+        renderer.sprite = spriteFaceDown;
+    }
+
+    public void ConnectToManager(LevelManager manager, int id)
+    {
+        this.manager = manager;
+        this.id = id;
     }
 }
