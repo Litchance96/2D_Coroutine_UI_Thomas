@@ -348,6 +348,26 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 462783368759889911, guid: 11a02f726f642d44f807819d75d1de9e, type: 3}
+      propertyPath: spriteFaceUp
+      value: 
+      objectReference: {fileID: 1182844187, guid: 73046b6a11b6e9b4cb8a2a7d939faa37, type: 3}
+    - target: {fileID: 462783368759889911, guid: 11a02f726f642d44f807819d75d1de9e, type: 3}
+      propertyPath: spriteFaceDown
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5753745772828984630, guid: 11a02f726f642d44f807819d75d1de9e, type: 3}
+      propertyPath: m_Size.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5753745772828984630, guid: 11a02f726f642d44f807819d75d1de9e, type: 3}
+      propertyPath: m_Offset.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5753745772828984630, guid: 11a02f726f642d44f807819d75d1de9e, type: 3}
+      propertyPath: m_Offset.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6644674620101653715, guid: 11a02f726f642d44f807819d75d1de9e, type: 3}
       propertyPath: m_Name
       value: Card
