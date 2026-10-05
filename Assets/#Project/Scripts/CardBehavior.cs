@@ -1,9 +1,12 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 [RequireComponent(typeof(Animator))]
 public class CardBehavior : MonoBehaviour
 {
     private const string FACE_UP_ANIMATION = "IsFaceUp";
+    private const string MOUSE_OVER_ANIMATION = "IsFocused";
+
     [SerializeField] private Sprite spriteFaceDown;
     [SerializeField] private Sprite spriteFaceUp;
 
@@ -12,9 +15,10 @@ public class CardBehavior : MonoBehaviour
     [SerializeField] private SpriteRenderer renderer;
 
     public bool IsFaceUp { get; private set; } = false;
+    public bool IsFocused { get; private set; } = false;
 
     private LevelManager manager = null;
-    private int id;
+    public int Id { get; private set; }
 
 
 #pragma warning restore CS0108
@@ -51,6 +55,16 @@ public class CardBehavior : MonoBehaviour
         IsFaceUp = isFaceUp;
     }
 
+    private void SetFocus(bool isFocused)
+    {
+        IsFocused = isFocused;
+        animator.SetBool(MOUSE_OVER_ANIMATION, isFocused);
+    }
+
+    public void Focus() => SetFocus(true);
+
+    public void UnFocus() => SetFocus(false);
+
     public void TurnFaceUp() => Turn(true);
     public void TurnFaceDown() => Turn(false);
 
@@ -67,6 +81,7 @@ public class CardBehavior : MonoBehaviour
     public void ConnectToManager(LevelManager manager, int id)
     {
         this.manager = manager;
-        this.id = id;
+        Id = id;
     }
+
 }

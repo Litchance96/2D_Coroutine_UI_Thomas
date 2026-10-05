@@ -350,6 +350,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2020992641}
   - component: {fileID: 2020992640}
+  - component: {fileID: 2020992642}
   m_Layer: 0
   m_Name: Level Manager
   m_TagString: Untagged
@@ -369,10 +370,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04bf8a4fd09bd7d4bacd8d759878e911, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelManager
-  cardNumber: 24
-  cardsByLine: 10
+  cardNumber: 6
+  cardsByLine: 3
   offSet: {x: 0.2, y: 0.2}
-  prefab: {fileID: 6644674620101653715, guid: 11a02f726f642d44f807819d75d1de9e, type: 3}
+  prefab: {fileID: 462783368759889911, guid: 11a02f726f642d44f807819d75d1de9e, type: 3}
 --- !u!4 &2020992641
 Transform:
   m_ObjectHideFlags: 0
@@ -388,6 +389,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2020992642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2020992639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5488d9f878adefc48b683775678511d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MouseManager
+  inputActions: {fileID: -944628639613478452, guid: 6c60cb95662d5d24e9f858c925ffc126, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

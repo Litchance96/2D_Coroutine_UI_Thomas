@@ -14,6 +14,10 @@ public class LevelManager : MonoBehaviour
 
     private List<CardBehavior> cardBehaviors = new();
 
+    private int cardFocusedId = -1;
+
+    private CardBehavior CardFocused => cardFocusedId >= 0 ? cardBehaviors[cardFocusedId] : null;
+
     private void Start()
     {
         if (cardNumber % 2 != 0)
@@ -51,6 +55,28 @@ public class LevelManager : MonoBehaviour
                 cardBehaviors.Add(cardBehavior);
                 if (cardBehaviors.Count >= cardNumber) return;
             }
+        }
+    }
+
+    public void MouseOnCard(CardBehavior cardBehavior)
+    {
+        if (cardBehavior == null)
+        {
+            if (CardFocused != null)
+            {
+                CardFocused.UnFocus();
+                cardFocusedId = -1;
+            }
+
+        }
+        else if (cardBehavior.Id != cardFocusedId)
+        {
+            if (CardFocused != null)
+            {
+                CardFocused.UnFocus();
+            }
+            cardFocusedId = cardBehavior.Id;
+            cardBehavior.Focus();
         }
     }
 }
