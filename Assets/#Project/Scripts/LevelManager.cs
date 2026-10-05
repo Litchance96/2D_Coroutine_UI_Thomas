@@ -1,9 +1,11 @@
-//disable warning about readonly field
+//disable warning about read-only field
 #pragma warning disable IDE0044
 
-using System;
+
 using System.Collections.Generic;
+using System.Collections;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class LevelManager : MonoBehaviour
 {
@@ -12,11 +14,23 @@ public class LevelManager : MonoBehaviour
     [SerializeField] private Vector2 offSet = Vector2.one * 0.2f;
     [SerializeField] private CardBehavior prefab;
 
+    [SerializeField] private Sprite[] spriteFaceUp;
+
+    public MouseManager MouseManager {get; private set;}
+
     private List<CardBehavior> cardBehaviors = new();
 
     private int cardFocusedId = -1;
 
+    private int firstCardFaceUpId = -1;
+
+    private int secondCardFaceUpId = -1;
+    [SerializeField] private float timeBeforeFaceDown;
+
     private CardBehavior CardFocused => cardFocusedId >= 0 ? cardBehaviors[cardFocusedId] : null;
+    private CardBehavior FirstCardFaceUp => firstCardFaceUpId >= 0 ? cardBehaviors[firstCardFaceUpId] : null;
+
+    private CardBehavior SecondCardFaceUp => secondCardFaceUpId >= 0 ? cardBehaviors[secondCardFaceUpId] : null;
 
     private void Start()
     {
@@ -31,6 +45,16 @@ public class LevelManager : MonoBehaviour
 
     private void InstantiateCards()
     {
+        List<int> facePoolIndex = new();
+
+        for (int index =0; index < cardNumber/2; index++)
+        {
+            facePoolIndex.Add(index);
+            facePoolIndex.Add(index);
+        }
+        ;
+
+
         BoxCollider2D collider = prefab.GetComponentInChildren<BoxCollider2D>();
         float width = collider.size.x;
         float height = collider.size.y;
@@ -50,6 +74,12 @@ public class LevelManager : MonoBehaviour
                 position += x * (width + offSet.x) * Vector2.right;
                 CardBehavior cardBehavior = Instantiate(prefab, position, Quaternion.identity);
 
+                int rndIndex = Random.Range(0, facePoolIndex.Count);
+                int faceIndex = facePoolIndex[rndIndex];
+                cardBehavior.SetFace(spriteFaceUp[faceIndex], faceIndex);
+                facePoolIndex.RemoveAt(rndIndex);
+
+
                 cardBehavior.ConnectToManager(this, cardBehaviors.Count);
 
                 cardBehaviors.Add(cardBehavior);
@@ -58,6 +88,10 @@ public class LevelManager : MonoBehaviour
         }
     }
 
+    public void ConnectMouseManager(MouseManager mouseManager)
+    {
+        MouseManager = mouseManager;
+    }
     public void MouseOnCard(CardBehavior cardBehavior)
     {
         if (cardBehavior == null)
@@ -69,7 +103,7 @@ public class LevelManager : MonoBehaviour
             }
 
         }
-        else if (cardBehavior.Id != cardFocusedId)
+        else if (cardBehavior.Id != cardFocusedId && cardBehavior.Id != firstCardFaceUpId)
         {
             if (CardFocused != null)
             {
@@ -78,5 +112,50 @@ public class LevelManager : MonoBehaviour
             cardFocusedId = cardBehavior.Id;
             cardBehavior.Focus();
         }
+    }
+    public void MouseClick()
+    {
+        if(CardFocused != null) 
+        {
+
+            CardFocused.TurnFaceUp();
+            if(FirstCardFaceUp == null)
+            {
+                
+                firstCardFaceUpId = cardFocusedId;
+                
+            }
+            else
+            {
+                secondCardFaceUpId = cardFocusedId;
+                StartCoroutine(CheckResult());
+
+            }
+
+            CardFocused.UnFocus();
+            cardFocusedId = -1;
+
+            
+        }
+
+    }
+
+    private IEnumerator CheckResult()
+    {
+        MouseManager.enabled = false;
+
+        yield return new WaitForSeconds(timeBeforeFaceDown);
+
+        if(FirstCardFaceUp.FaceId != SecondCardFaceUp.FaceId)
+        {
+            FirstCardFaceUp.TurnFaceDown();
+            SecondCardFaceUp.TurnFaceDown();
+        }
+
+        firstCardFaceUpId = -1;
+        secondCardFaceUpId = -1;
+
+
+        MouseManager.enabled = true;
     }
 }

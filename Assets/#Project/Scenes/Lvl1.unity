@@ -370,10 +370,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 04bf8a4fd09bd7d4bacd8d759878e911, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::LevelManager
-  cardNumber: 6
-  cardsByLine: 3
+  cardNumber: 18
+  cardsByLine: 6
   offSet: {x: 0.2, y: 0.2}
   prefab: {fileID: 462783368759889911, guid: 11a02f726f642d44f807819d75d1de9e, type: 3}
+  spriteFaceUp:
+  - {fileID: 1182844187, guid: 73046b6a11b6e9b4cb8a2a7d939faa37, type: 3}
+  - {fileID: -860441750, guid: 73046b6a11b6e9b4cb8a2a7d939faa37, type: 3}
+  - {fileID: -1535312783, guid: 73046b6a11b6e9b4cb8a2a7d939faa37, type: 3}
+  - {fileID: 310987131, guid: 73046b6a11b6e9b4cb8a2a7d939faa37, type: 3}
+  - {fileID: 1513492183, guid: 73046b6a11b6e9b4cb8a2a7d939faa37, type: 3}
+  - {fileID: 932409167, guid: 73046b6a11b6e9b4cb8a2a7d939faa37, type: 3}
+  - {fileID: 190361519, guid: 73046b6a11b6e9b4cb8a2a7d939faa37, type: 3}
+  - {fileID: 2005389659, guid: 73046b6a11b6e9b4cb8a2a7d939faa37, type: 3}
+  - {fileID: -1876002755, guid: 73046b6a11b6e9b4cb8a2a7d939faa37, type: 3}
+  - {fileID: -435753063, guid: 73046b6a11b6e9b4cb8a2a7d939faa37, type: 3}
+  - {fileID: 826385968, guid: 73046b6a11b6e9b4cb8a2a7d939faa37, type: 3}
+  - {fileID: 2098918399, guid: 73046b6a11b6e9b4cb8a2a7d939faa37, type: 3}
+  timeBeforeFaceDown: 2
 --- !u!4 &2020992641
 Transform:
   m_ObjectHideFlags: 0
@@ -402,6 +416,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::MouseManager
   inputActions: {fileID: -944628639613478452, guid: 6c60cb95662d5d24e9f858c925ffc126, type: 3}
+  levelManager: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
