@@ -46,156 +46,30 @@ public class LevelManager : MonoBehaviour
         {
             cardNumber++;
             Debug.LogWarning($"Card Number need to be an even number then it's became {cardNumber}.");
+
+        }
+
+        foreach(GameObject go in gameObjectActivateOnVictory)
+        {
+            go.SetActive(false);
         }
 
         //InstantiateCards();
     }
+    public void SetCardNumber(int n)
+    {
+        cardNumber = n;
 
+        if (cardNumber % 2 != 0)
+        {
+            cardNumber++;
+            Debug.LogWarning($"Card Number need to be an even number then it's became {cardNumber}.");
+        }
+    }
     public void InstantiateCards()
     {
 
         List<int> facePoolIndex = new();
-
-        for (int index =0; index < cardNumber/2; index++)
-        {
-            facePoolIndex.Add(index);
-            facePoolIndex.Add(index);
-        }
-        ;
-
-
-        BoxCollider2D collider = prefab.GetComponentInChildren<BoxCollider2D>();
-        float width = collider.size.x;
-        float height = collider.size.y;
-
-        int lines = cardNumber / cardsByLine;
-        if (cardNumber % cardsByLine != 0) lines++;
-
-        float px = (cardsByLine * (width + offSet.x) - offSet.x) / -2f;
-        float py = (lines * (height + offSet.y) - offSet.y) / -2f;
-        Vector2 origin = new(px, py);
-
-        for (int y = 0; y < lines; y++)
-        {
-            for (int x = 0; x < cardsByLine; x++)
-            {
-                Vector2 position = origin + y * (height + offSet.y) * Vector2.up;
-                position += x * (width + offSet.x) * Vector2.right;
-                CardBehavior cardBehavior = Instantiate(prefab, position, Quaternion.identity);
-
-                int rndIndex = Random.Range(0, facePoolIndex.Count);
-                int faceIndex = facePoolIndex[rndIndex];
-                cardBehavior.SetFace(spriteFaceUp[faceIndex], faceIndex);
-                facePoolIndex.RemoveAt(rndIndex);
-
-
-                cardBehavior.ConnectToManager(this, cardBehaviors.Count);
-
-                cardBehaviors.Add(cardBehavior);
-                if (cardBehaviors.Count >= cardNumber) return;
-            }
-        }
-    }
-
-    public void Instantiate6Cards()
-    {
-        List<int> facePoolIndex = new();
-
-        cardNumber = 6;
-
-        for (int index =0; index < cardNumber/2; index++)
-        {
-            facePoolIndex.Add(index);
-            facePoolIndex.Add(index);
-        }
-        ;
-
-
-        BoxCollider2D collider = prefab.GetComponentInChildren<BoxCollider2D>();
-        float width = collider.size.x;
-        float height = collider.size.y;
-
-        int lines = cardNumber / cardsByLine;
-        if (cardNumber % cardsByLine != 0) lines++;
-
-        float px = (cardsByLine * (width + offSet.x) - offSet.x) / -2f;
-        float py = (lines * (height + offSet.y) - offSet.y) / -2f;
-        Vector2 origin = new(px, py);
-
-        for (int y = 0; y < lines; y++)
-        {
-            for (int x = 0; x < cardsByLine; x++)
-            {
-                Vector2 position = origin + y * (height + offSet.y) * Vector2.up;
-                position += x * (width + offSet.x) * Vector2.right;
-                CardBehavior cardBehavior = Instantiate(prefab, position, Quaternion.identity);
-
-                int rndIndex = Random.Range(0, facePoolIndex.Count);
-                int faceIndex = facePoolIndex[rndIndex];
-                cardBehavior.SetFace(spriteFaceUp[faceIndex], faceIndex);
-                facePoolIndex.RemoveAt(rndIndex);
-
-
-                cardBehavior.ConnectToManager(this, cardBehaviors.Count);
-
-                cardBehaviors.Add(cardBehavior);
-                if (cardBehaviors.Count >= cardNumber) return;
-            }
-        }
-    }
-
-    public void Instantiate12Cards()
-    {
-        List<int> facePoolIndex = new();
-
-        cardNumber = 12;
-
-        for (int index =0; index < cardNumber/2; index++)
-        {
-            facePoolIndex.Add(index);
-            facePoolIndex.Add(index);
-        }
-        ;
-
-
-        BoxCollider2D collider = prefab.GetComponentInChildren<BoxCollider2D>();
-        float width = collider.size.x;
-        float height = collider.size.y;
-
-        int lines = cardNumber / cardsByLine;
-        if (cardNumber % cardsByLine != 0) lines++;
-
-        float px = (cardsByLine * (width + offSet.x) - offSet.x) / -2f;
-        float py = (lines * (height + offSet.y) - offSet.y) / -2f;
-        Vector2 origin = new(px, py);
-
-        for (int y = 0; y < lines; y++)
-        {
-            for (int x = 0; x < cardsByLine; x++)
-            {
-                Vector2 position = origin + y * (height + offSet.y) * Vector2.up;
-                position += x * (width + offSet.x) * Vector2.right;
-                CardBehavior cardBehavior = Instantiate(prefab, position, Quaternion.identity);
-
-                int rndIndex = Random.Range(0, facePoolIndex.Count);
-                int faceIndex = facePoolIndex[rndIndex];
-                cardBehavior.SetFace(spriteFaceUp[faceIndex], faceIndex);
-                facePoolIndex.RemoveAt(rndIndex);
-
-
-                cardBehavior.ConnectToManager(this, cardBehaviors.Count);
-
-                cardBehaviors.Add(cardBehavior);
-                if (cardBehaviors.Count >= cardNumber) return;
-            }
-        }
-    }
-
-    public void Instantiate24Cards()
-    {
-        List<int> facePoolIndex = new();
-
-        cardNumber = 24;
 
         for (int index =0; index < cardNumber/2; index++)
         {
@@ -368,3 +242,150 @@ public class LevelManager : MonoBehaviour
         MouseManager.enabled = true;
     }
 }
+
+
+
+
+
+
+
+    // public void Instantiate6Cards()
+    // {
+    //     List<int> facePoolIndex = new();
+
+    //     cardNumber = 6;
+
+    //     for (int index =0; index < cardNumber/2; index++)
+    //     {
+    //         facePoolIndex.Add(index);
+    //         facePoolIndex.Add(index);
+    //     }
+    //     ;
+
+
+    //     BoxCollider2D collider = prefab.GetComponentInChildren<BoxCollider2D>();
+    //     float width = collider.size.x;
+    //     float height = collider.size.y;
+
+    //     int lines = cardNumber / cardsByLine;
+    //     if (cardNumber % cardsByLine != 0) lines++;
+
+    //     float px = (cardsByLine * (width + offSet.x) - offSet.x) / -2f;
+    //     float py = (lines * (height + offSet.y) - offSet.y) / -2f;
+    //     Vector2 origin = new(px, py);
+
+    //     for (int y = 0; y < lines; y++)
+    //     {
+    //         for (int x = 0; x < cardsByLine; x++)
+    //         {
+    //             Vector2 position = origin + y * (height + offSet.y) * Vector2.up;
+    //             position += x * (width + offSet.x) * Vector2.right;
+    //             CardBehavior cardBehavior = Instantiate(prefab, position, Quaternion.identity);
+
+    //             int rndIndex = Random.Range(0, facePoolIndex.Count);
+    //             int faceIndex = facePoolIndex[rndIndex];
+    //             cardBehavior.SetFace(spriteFaceUp[faceIndex], faceIndex);
+    //             facePoolIndex.RemoveAt(rndIndex);
+
+
+    //             cardBehavior.ConnectToManager(this, cardBehaviors.Count);
+
+    //             cardBehaviors.Add(cardBehavior);
+    //             if (cardBehaviors.Count >= cardNumber) return;
+    //         }
+    //     }
+    // }
+
+    // public void Instantiate12Cards()
+    // {
+    //     List<int> facePoolIndex = new();
+
+    //     cardNumber = 12;
+
+    //     for (int index =0; index < cardNumber/2; index++)
+    //     {
+    //         facePoolIndex.Add(index);
+    //         facePoolIndex.Add(index);
+    //     }
+    //     ;
+
+
+    //     BoxCollider2D collider = prefab.GetComponentInChildren<BoxCollider2D>();
+    //     float width = collider.size.x;
+    //     float height = collider.size.y;
+
+    //     int lines = cardNumber / cardsByLine;
+    //     if (cardNumber % cardsByLine != 0) lines++;
+
+    //     float px = (cardsByLine * (width + offSet.x) - offSet.x) / -2f;
+    //     float py = (lines * (height + offSet.y) - offSet.y) / -2f;
+    //     Vector2 origin = new(px, py);
+
+    //     for (int y = 0; y < lines; y++)
+    //     {
+    //         for (int x = 0; x < cardsByLine; x++)
+    //         {
+    //             Vector2 position = origin + y * (height + offSet.y) * Vector2.up;
+    //             position += x * (width + offSet.x) * Vector2.right;
+    //             CardBehavior cardBehavior = Instantiate(prefab, position, Quaternion.identity);
+
+    //             int rndIndex = Random.Range(0, facePoolIndex.Count);
+    //             int faceIndex = facePoolIndex[rndIndex];
+    //             cardBehavior.SetFace(spriteFaceUp[faceIndex], faceIndex);
+    //             facePoolIndex.RemoveAt(rndIndex);
+
+
+    //             cardBehavior.ConnectToManager(this, cardBehaviors.Count);
+
+    //             cardBehaviors.Add(cardBehavior);
+    //             if (cardBehaviors.Count >= cardNumber) return;
+    //         }
+    //     }
+    // }
+
+    // public void Instantiate24Cards()
+    // {
+    //     List<int> facePoolIndex = new();
+
+    //     cardNumber = 24;
+
+    //     for (int index =0; index < cardNumber/2; index++)
+    //     {
+    //         facePoolIndex.Add(index);
+    //         facePoolIndex.Add(index);
+    //     }
+    //     ;
+
+
+    //     BoxCollider2D collider = prefab.GetComponentInChildren<BoxCollider2D>();
+    //     float width = collider.size.x;
+    //     float height = collider.size.y;
+
+    //     int lines = cardNumber / cardsByLine;
+    //     if (cardNumber % cardsByLine != 0) lines++;
+
+    //     float px = (cardsByLine * (width + offSet.x) - offSet.x) / -2f;
+    //     float py = (lines * (height + offSet.y) - offSet.y) / -2f;
+    //     Vector2 origin = new(px, py);
+
+    //     for (int y = 0; y < lines; y++)
+    //     {
+    //         for (int x = 0; x < cardsByLine; x++)
+    //         {
+    //             Vector2 position = origin + y * (height + offSet.y) * Vector2.up;
+    //             position += x * (width + offSet.x) * Vector2.right;
+    //             CardBehavior cardBehavior = Instantiate(prefab, position, Quaternion.identity);
+
+    //             int rndIndex = Random.Range(0, facePoolIndex.Count);
+    //             int faceIndex = facePoolIndex[rndIndex];
+    //             cardBehavior.SetFace(spriteFaceUp[faceIndex], faceIndex);
+    //             facePoolIndex.RemoveAt(rndIndex);
+
+
+    //             cardBehavior.ConnectToManager(this, cardBehaviors.Count);
+
+    //             cardBehaviors.Add(cardBehavior);
+    //             if (cardBehaviors.Count >= cardNumber) return;
+    //         }
+    //     }
+    // }
