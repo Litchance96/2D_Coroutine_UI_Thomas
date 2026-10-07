@@ -104,7 +104,7 @@ Transform:
   m_GameObject: {fileID: 709699644042123750}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.5, y: 1, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -159,7 +159,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 1724582513, guid: 73046b6a11b6e9b4cb8a2a7d939faa37, type: 3}
+  m_Sprite: {fileID: 6990426455083124355, guid: df9408a4c737c264095f814f70d79c69, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -197,7 +197,7 @@ Transform:
   m_GameObject: {fileID: 6644674620101653715}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.37031, y: 0.05868, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -217,7 +217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db140c0c81050b74588c954d80f582e6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CardBehavior
-  spriteFaceDown: {fileID: 0}
+  spriteFaceDown: {fileID: 6990426455083124355, guid: df9408a4c737c264095f814f70d79c69, type: 3}
   spriteFaceUp: {fileID: 1182844187, guid: 73046b6a11b6e9b4cb8a2a7d939faa37, type: 3}
   renderer: {fileID: 0}
 --- !u!95 &6496955301252672084

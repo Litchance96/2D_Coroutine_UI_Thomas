@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 73046b6a11b6e9b4cb8a2a7d939faa37
+guid: df9408a4c737c264095f814f70d79c69
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -607366374245702973
-    second: card_memory_0
+      213: 6990426455083124355
+    second: card_memory (1)_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -74,7 +74,7 @@ TextureImporter:
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
-    textureFormat: 4
+    textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
     crunchedCompression: 0
@@ -126,287 +126,287 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: cards_memory_0
+      name: card_memory (1)_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 32
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: fffbb6f83ea1b0b499212b544ce63e08
-      internalID: 1724582513
+      spriteID: 38609b3f2dbf20160800000000000000
+      internalID: 6990426455083124355
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cards_memory_1
+      name: card_memory (1)_1
       rect:
         serializedVersion: 2
         x: 32
         y: 0
         width: 32
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 855e41e4b98c02146a10a0d06b095142
-      internalID: 1182844187
+      spriteID: e0cb7c27bfaf7ae4f9950900ea3c6dc4
+      internalID: -825605168
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cards_memory_2
+      name: card_memory (1)_2
       rect:
         serializedVersion: 2
         x: 64
         y: 0
         width: 32
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c005b23f638469f4cb64d359ce2a6ce9
-      internalID: -860441750
+      spriteID: 7895c17575f0e8a4496fd9f4932e1a19
+      internalID: 354851665
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cards_memory_3
+      name: card_memory (1)_3
       rect:
         serializedVersion: 2
         x: 96
         y: 0
         width: 32
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 38475081718fd674a89aaaa73c398f7f
-      internalID: -1535312783
+      spriteID: bc0d960e17da4ca42b04fe7f459076cd
+      internalID: 522700112
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cards_memory_4
+      name: card_memory (1)_4
       rect:
         serializedVersion: 2
         x: 128
         y: 0
         width: 32
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 73a4782ba61c6864b86b1d7d515bde27
-      internalID: 310987131
+      spriteID: fed537a0360e1134f899d3aaf27ebcc5
+      internalID: -1550614356
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cards_memory_5
+      name: card_memory (1)_5
       rect:
         serializedVersion: 2
         x: 160
         y: 0
         width: 32
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c4778708fe766134cbc198ce8f92b188
-      internalID: 1513492183
+      spriteID: 5ec9020b0a40a724d843dd89a75ced47
+      internalID: 876398842
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cards_memory_6
+      name: card_memory (1)_6
       rect:
         serializedVersion: 2
         x: 192
         y: 0
         width: 32
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c14922f5e9cbc5142853443076ab23bb
-      internalID: 932409167
+      spriteID: b8b59d3b3d06615468ed52864604595e
+      internalID: -707081402
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cards_memory_7
+      name: card_memory (1)_7
       rect:
         serializedVersion: 2
         x: 224
         y: 0
         width: 32
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 35ddc382aeb93fa4896fc45e20aa16b3
-      internalID: 190361519
+      spriteID: d8af36ddb24c6f3408a16a67bed12f0b
+      internalID: 490408633
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cards_memory_8
+      name: card_memory (1)_8
       rect:
         serializedVersion: 2
         x: 256
         y: 0
         width: 32
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 57e2f76e98dd040409b7396733cbb44d
-      internalID: 2005389659
+      spriteID: 78b157e3ec9122e41ba72815e8c9e6f9
+      internalID: -1882498386
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cards_memory_9
+      name: card_memory (1)_9
       rect:
         serializedVersion: 2
         x: 288
         y: 0
         width: 32
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8f1fb35997d83494795d9280f0a7efc1
-      internalID: -1876002755
+      spriteID: fd83e81403ca8fa48adec187f6afccd4
+      internalID: 850086156
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cards_memory_10
+      name: card_memory (1)_10
       rect:
         serializedVersion: 2
         x: 320
         y: 0
         width: 32
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: fbc230e48d72e7847bc0b7c416e4a13c
-      internalID: -435753063
+      spriteID: 7f86e75af6c90f84b9364356262dee76
+      internalID: 1497411745
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cards_memory_11
+      name: card_memory (1)_11
       rect:
         serializedVersion: 2
         x: 352
         y: 0
         width: 32
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 721ddfa1019b9cc41bebfd716f6345a9
-      internalID: 826385968
+      spriteID: b63be573239ba7d4f90c1352b628be13
+      internalID: -1345804411
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: cards_memory_12
+      name: card_memory (1)_12
       rect:
         serializedVersion: 2
         x: 384
         y: 0
         width: 32
         height: 64
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      alignment: 6
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 545b29a68e41f7c4daa54feb76cf8bab
-      internalID: 2098918399
+      spriteID: 07b9bc20ad17a3f40b6d649c03226368
+      internalID: -408791398
       vertices: []
       indices: 
       edges: []
@@ -415,7 +415,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 71d733c11efbc014cb374bfc88211ac6
+    spriteID: c5b5d06d1a558984bab02127a1feb07d
     internalID: 0
     vertices: []
     indices: 
@@ -425,21 +425,21 @@ TextureImporter:
     spriteCustomMetadata:
       entries:
       - key: SpriteEditor.SliceSettings
-        value: '{"sliceOnImport":false,"gridCellCount":{"x":13.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":13.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":64.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":6,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      cards_memory_0: 1724582513
-      cards_memory_1: 1182844187
-      cards_memory_10: -435753063
-      cards_memory_11: 826385968
-      cards_memory_12: 2098918399
-      cards_memory_2: -860441750
-      cards_memory_3: -1535312783
-      cards_memory_4: 310987131
-      cards_memory_5: 1513492183
-      cards_memory_6: 932409167
-      cards_memory_7: 190361519
-      cards_memory_8: 2005389659
-      cards_memory_9: -1876002755
+      card_memory (1)_0: 6990426455083124355
+      card_memory (1)_1: -825605168
+      card_memory (1)_10: 1497411745
+      card_memory (1)_11: -1345804411
+      card_memory (1)_12: -408791398
+      card_memory (1)_2: 354851665
+      card_memory (1)_3: 522700112
+      card_memory (1)_4: -1550614356
+      card_memory (1)_5: 876398842
+      card_memory (1)_6: -707081402
+      card_memory (1)_7: 490408633
+      card_memory (1)_8: -1882498386
+      card_memory (1)_9: 850086156
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
